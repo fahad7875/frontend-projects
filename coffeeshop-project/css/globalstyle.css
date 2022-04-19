@@ -1,0 +1,94 @@
+/*  --﷽-- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: "Roboto", sans-serif;
+  transition: all 0.4s linear;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 10rem;
+  overflow-x: hidden;
+}
+
+html::-webkit-scrollbar {
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #f0f8ff;
+  border-radius: 5rem;
+}
+
+:root {
+  --main-color: #d3ad7f;
+  --black: #13131a;
+  --bgcolor: #010103;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+}
+
+body {
+  background-color: var(--bgcolor);
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+section {
+  padding: 1.5rem 6%;
+}
+
+.btn {
+  font-size: 1.8rem;
+  padding: 0.5rem 2rem;
+  border: none;
+  cursor: pointer;
+  text-transform: capitalize;
+  color: #fff;
+  background-color: var(--main-color);
+}
+
+.btn:hover {
+  letter-spacing: 0.2rem;
+}
+
+.section-title {
+  color: #fff;
+  font-size: 4rem;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  text-align: center;
+}
+
+.section-title span {
+  color: var(--main-color);
+}
+
+h3 {
+  text-align: center;
+  color: #fff;
+  font-size: 3rem;
+  text-transform: capitalize;
+  padding: 1rem 0.5rem;
+}
+
+h4 {
+  color: white;
+  font-size: 2rem;
+  text-transform: capitalize;
+  padding: 1rem;
+}
+
+/* happy coding!!!! */
+/* this project made by Fahad at 19th April, 2022 */

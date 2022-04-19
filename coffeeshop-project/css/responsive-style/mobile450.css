@@ -1,0 +1,20 @@
+/*  --﷽-- */
+
+html {
+  font-size: 50%;
+}
+
+.main .home .content .home-title {
+  font-size: 5rem;
+}
+
+.main .review .review-container {
+  grid-template-columns: 12fr;
+}
+
+.main .blog .blog-container {
+  grid-template-columns: 12fr;
+}
+
+/* happy coding!!!! */
+/* this project made by Fahad at 19th April, 2022 */

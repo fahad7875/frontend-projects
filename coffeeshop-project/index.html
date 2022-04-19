@@ -1,0 +1,515 @@
+<!-- --﷽-- -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>coffee-project</title>
+    <link
+      rel="shortcut icon"
+      href="./image/title-logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- font awsome cdn linked here -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font linked here -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- linked global style css file here-->
+    <link rel="stylesheet" href="./css/globalstyle.css" />
+
+    <!-- custom css stylesheet linked here -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- responsive css stylesheet linked here -->
+    <link
+      rel="stylesheet"
+      href="./css/responsive-style/dextop991.css"
+      media="screen and (max-width: 991px)"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./css/responsive-style/ipad768.css"
+      media="screen and (max-width: 768px)"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./css/responsive-style/mobile450.css"
+      media="screen and (max-width: 450px)"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- =======markup header section=======  -->
+      <header class="header">
+        <!-- ----logo portion---- -->
+        <a href="#" class="logo">
+          <img src="./image/logo.png" alt="logo" />
+        </a>
+
+        <!-- ----menu item---- -->
+        <nav class="navbar">
+          <a href="#home">home</a>
+          <a href="#about">about</a>
+          <a href="#menu">menu</a>
+          <a href="#product">products</a>
+          <a href="#review">review</a>
+          <a href="#contact">contact</a>
+          <a href="#blog">blog</a>
+        </nav>
+
+        <!-- ----side icon---- -->
+        <div class="icons">
+          <div id="search-btn" class="fa-solid fa-magnifying-glass icon"></div>
+
+          <div id="cart-btn" class="fa-solid fa-cart-shopping icon"></div>
+
+          <div id="menu-btn" class="fa-solid fa-bars icon"></div>
+        </div>
+
+        <!-- ----search form---- -->
+        <div class="search-form">
+          <input
+            type="search"
+            name=""
+            id="search-box"
+            placeholder="search here..."
+          />
+          <label for="search-box" class="fa-solid fa-magnifying-glass"></label>
+        </div>
+
+        <!-- ----cart container---- -->
+        <div class="cart-item-container">
+          <!-- --cart : 01-- -->
+          <div class="cart-item">
+            <span class="fa-solid fa-xmark x-mark"></span>
+            <img src="./image/cart-item-1.png" alt="found no image" />
+            <div class="content">
+              <h3>cart item 01</h3>
+              <p class="price">$15.99/-</p>
+            </div>
+          </div>
+
+          <!-- --cart : 02-- -->
+          <div class="cart-item">
+            <span class="fa-solid fa-xmark x-mark"></span>
+            <img src="./image/cart-item-2.png" alt="found no image" />
+            <div class="content">
+              <h3>cart item 02</h3>
+              <p class="price">$15.99/-</p>
+            </div>
+          </div>
+
+          <!-- --cart : 03-- -->
+          <div class="cart-item">
+            <span class="fa-solid fa-xmark x-mark"></span>
+            <img src="./image/cart-item-3.png" alt="found no image" />
+            <div class="content">
+              <h3>cart item 03</h3>
+              <p class="price">$15.99/-</p>
+            </div>
+          </div>
+
+          <!-- --cart : 04-- -->
+          <div class="cart-item">
+            <span class="fa-solid fa-xmark x-mark"></span>
+            <img src="./image/cart-item-4.png" alt="found no image" />
+            <div class="content">
+              <h3>cart item 04</h3>
+              <p class="price">$15.99/-</p>
+            </div>
+          </div>
+
+          <input type="button" class="btn" value="checkout now" />
+        </div>
+      </header>
+
+      <!-- =======markup main element=======  -->
+
+      <main class="main">
+        <!-- ========home section======= -->
+        <section id="home" class="home">
+          <div class="content">
+            <h1 class="home-title">fresh coffee in the morning</h1>
+            <p class="home-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+              excepturi officia sequi fugit distinctio cupiditate?
+            </p>
+
+            <input type="button" value="get yours now" class="btn" />
+          </div>
+        </section>
+
+        <!-- ========about section======= -->
+        <section id="about" class="about">
+          <h2 class="section-title"><span>about </span> us</h2>
+
+          <div class="about-image">
+            <img src="./image/about-img.jpeg" alt="found no image" />
+          </div>
+
+          <div class="about-content">
+            <h3>what makes our coffee special?</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+              facilis possimus rerum placeat sint facere odit quae alias, nihil
+              corrupti totam, commodi saepe magni ab quia aperiam a. Nostrum,
+              minima.
+            </p>
+
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              praesentium exercitationem illo quidem ad dolor tenetur earum
+              voluptatibus labore iste!
+            </p>
+
+            <input type="button" value="learn more" class="btn" />
+          </div>
+        </section>
+
+        <!-- ========menu section======= -->
+        <section id="menu" class="menu">
+          <h2 class="section-title">our <span> menu</span></h2>
+
+          <div class="card-container">
+            <!-- ----card: 01---- -->
+            <div class="card">
+              <img src="./image/menu-1.png" alt="found no image" />
+              <h4>tasty and healty</h4>
+              <p class="price">$15.99 <span>20.99</span></p>
+              <input type="button" value="Add to cart" class="btn" />
+            </div>
+
+            <!-- ----card: 02---- -->
+            <div class="card">
+              <img src="./image/menu-2.png" alt="found no image" />
+              <h4>tasty and healty</h4>
+              <p class="price">$15.99 <span>20.99</span></p>
+              <input type="button" value="Add to cart" class="btn" />
+            </div>
+
+            <!-- ----card: 03---- -->
+            <div class="card">
+              <img src="./image/menu-3.png" alt="found no image" />
+              <h4>tasty and healty</h4>
+              <p class="price">$15.99 <span>20.99</span></p>
+              <input type="button" value="Add to cart" class="btn" />
+            </div>
+
+            <!-- ----card: 04---- -->
+            <div class="card">
+              <img src="./image/menu-4.png" alt="found no image" />
+              <h4>tasty and healty</h4>
+              <p class="price">$15.99 <span>20.99</span></p>
+              <input type="button" value="Add to cart" class="btn" />
+            </div>
+
+            <!-- ----card: 05---- -->
+            <div class="card">
+              <img src="./image/menu-5.png" alt="found no image" />
+              <h4>tasty and healty</h4>
+              <p class="price">$15.99 <span>20.99</span></p>
+              <input type="button" value="Add to cart" class="btn" />
+            </div>
+
+            <!-- ----card: 06---- -->
+            <div class="card">
+              <img src="./image/menu-6.png" alt="found no image" />
+              <h4>tasty and healty</h4>
+              <p class="price">$15.99 <span>20.99</span></p>
+              <input type="button" value="Add to cart" class="btn" />
+            </div>
+          </div>
+        </section>
+
+        <!-- ========product section======= -->
+        <section id="product" class="product">
+          <h2 class="section-title">our <span> products</span></h2>
+
+          <div class="product-container">
+            <!-- ----product : 01---- -->
+            <div class="p-card">
+              <div class="p-icon">
+                <a href="#"><i class="fas fa-cart-shopping"></i></a>
+                <a href="#"><i class="fas fa-heart"></i></a>
+                <a href="#"><i class="fas fa-eye"></i></a>
+              </div>
+              <img src="./image/product-1.png" alt="found no image" />
+              <h4>fresh coffee</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="price">$15.99 <span>20.99</span></p>
+            </div>
+
+            <!-- ----product : 02---- -->
+            <div class="p-card">
+              <div class="p-icon">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-eye"></i></a>
+              </div>
+              <img src="./image/product-2.png" alt="found no image" />
+              <h4>fresh coffee</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="price">$15.99 <span>20.99</span></p>
+            </div>
+
+            <!-- ----product : 03---- -->
+            <div class="p-card">
+              <div class="p-icon">
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-heart"></i></a>
+                <a href="#"><i class="fa-solid fa-eye"></i></a>
+              </div>
+              <img src="./image/product-3.png" alt="found no image" />
+              <h4>fresh coffee</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+              <p class="price">$15.99 <span>20.99</span></p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========reveiw section======= -->
+        <section id="review" class="review">
+          <h2 class="section-title">customer's <span> review</span></h2>
+
+          <div class="review-container">
+            <!-- ----review card : 01 -->
+            <div class="r-card">
+              <img
+                src="./image/quote-img.png"
+                alt="found no image"
+                class="quote"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                nulla sit libero nemo fuga sequi nobis? Necessitatibus aut
+                laborum, nisi quas eaque laudantium consequuntur iste ex aliquam
+                minus vel? Nemo.
+              </p>
+              <img
+                src="./image/pic-1.png"
+                alt="found no image"
+                class="customer-image"
+              />
+              <h4>jhon deo</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+
+            <!-- ----review card : 02 -->
+            <div class="r-card">
+              <img
+                src="./image/quote-img.png"
+                alt="found no image"
+                class="quote"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                nulla sit libero nemo fuga sequi nobis? Necessitatibus aut
+                laborum, nisi quas eaque laudantium consequuntur iste ex aliquam
+                minus vel? Nemo.
+              </p>
+              <img
+                src="./image/pic-2.png"
+                alt="found no image"
+                class="customer-image"
+              />
+              <h4>kate ameli</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+
+            <!-- ----review card : 03 -->
+            <div class="r-card">
+              <img
+                src="./image/quote-img.png"
+                alt="found no image"
+                class="quote"
+              />
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
+                nulla sit libero nemo fuga sequi nobis? Necessitatibus aut
+                laborum, nisi quas eaque laudantium consequuntur iste ex aliquam
+                minus vel? Nemo.
+              </p>
+              <img
+                src="./image/pic-3.png"
+                alt="found no image"
+                class="customer-image"
+              />
+              <h4>jhon deo</h4>
+              <div class="star">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========contact section======= -->
+        <section id="contact" class="contact">
+          <h2 class="section-title"><span>contact </span> us</h2>
+          <div class="contact-content">
+            <div class="map">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5233038.494331201!2d88.90612264366094!3d25.081853941235124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30adaaed80e18ba7%3A0xf2d28e0c4e1fc6b!2sBangladesh!5e0!3m2!1sen!2sbd!4v1650341539967!5m2!1sen!2sbd"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            <div class="message">
+              <h3>get in touch</h3>
+              <form action="#" class="form">
+                <div class="name">
+                  <i class="fas fa-user"></i>
+                  <input type="text" placeholder="Name" required />
+                </div>
+
+                <div class="email">
+                  <i class="fas fa-envelope"></i>
+                  <input type="email" placeholder="Email" required />
+                </div>
+
+                <div class="phone">
+                  <i class="fas fa-phone"></i>
+                  <input type="number" placeholder="Phone" required />
+                </div>
+
+                <input type="submit" value="contact now" class="btn" />
+              </form>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========contact section======= -->
+        <section id="blog" class="blog">
+          <h2 class="section-title">our <span> blog's</span></h2>
+          <div class="blog-container">
+            <!-- ----blog card : 01---- -->
+            <div class="blog-card">
+              <div class="image">
+                <img src="./image/blog-1.jpeg" alt="found no image" />
+              </div>
+              <h4>tasty and refreshing coffee</h4>
+              <h5>by admin / 19th april, 2022</h5>
+              <p>
+                lorem ipsum dolor sit amet consectetur adipisicing elit. non,
+                dicta.
+              </p>
+              <input type="button" value="read more" class="btn" />
+            </div>
+
+            <!-- ----blog card : 02---- -->
+            <div class="blog-card">
+              <div class="image">
+                <img src="./image/blog-2.jpeg" alt="found no image" />
+              </div>
+              <h4>tasty and refreshing coffee</h4>
+              <h5>by admin / 19th april, 2022</h5>
+              <p>
+                lorem ipsum dolor sit amet consectetur adipisicing elit. non,
+                dicta.
+              </p>
+              <input type="button" value="read more" class="btn" />
+            </div>
+
+            <!-- ----blog card : 03---- -->
+            <div class="blog-card">
+              <div class="image">
+                <img src="./image/blog-3.jpeg" alt="found no image" />
+              </div>
+              <h4>tasty and refreshing coffee</h4>
+              <h5>by admin / 19th april, 2022</h5>
+              <p>
+                lorem ipsum dolor sit amet consectetur adipisicing elit. non,
+                dicta.
+              </p>
+              <input type="button" value="read more" class="btn" />
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- =======markup footer element=======  -->
+
+      <footer class="footer">
+        <div class="social-icon">
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+
+        <div class="footer-menu">
+          <a href="#home">home</a>
+          <a href="#about">about</a>
+          <a href="#menu">menu</a>
+          <a href="#product">products</a>
+          <a href="#review">review</a>
+          <a href="#contact">contact</a>
+          <a href="#blog">blogs</a>
+        </div>
+
+        <p class="copyright">
+          created by <span>fahad</span> | &copy all rights reserved.
+        </p>
+      </footer>
+    </div>
+
+    <!-- linked js file here -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+
+<!-- happy coding!!!! -->
+<!-- this project made by Fahad at 19th April, 2022 -->

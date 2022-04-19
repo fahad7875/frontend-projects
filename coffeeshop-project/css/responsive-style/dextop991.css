@@ -1,0 +1,40 @@
+/*  --﷽-- */
+
+html {
+  font-size: 55%;
+}
+
+.header {
+  padding: 1.5rem 2rem;
+}
+
+section {
+  padding: 1.5rem 2rem;
+}
+
+.main .about .about-image {
+  grid-column: 1 / -1;
+}
+
+.main .about .about-content {
+  grid-column: 1 / -1;
+}
+
+.main .menu .card-container {
+  grid-template-columns: repeat(2, 6fr);
+}
+
+.main .product .product-container {
+  grid-template-columns: repeat(2, 6fr);
+}
+
+.main .product .product-container .p-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.main .contact .contact-content {
+  grid-template-columns: 5fr 7fr;
+}
+
+/* happy coding!!!! */
+/* this project made by Fahad at 19th April, 2022 */

@@ -1,0 +1,73 @@
+/*  --﷽-- */
+
+/* ========styling header======= */
+#menu-btn {
+  display: inline-block;
+}
+
+.header .navbar {
+  position: absolute;
+  top: 100%;
+  right: -100%;
+  background-color: #f0f8ff;
+  width: 30rem;
+  height: calc(100vh - 9.5rem);
+  text-align: left;
+}
+
+.header .navbar.active {
+  right: 0;
+}
+
+.header .navbar a {
+  display: block;
+  color: var(--black);
+  margin: 1.5rem;
+  padding: 0.5rem 2rem;
+  font-size: 2rem;
+}
+
+.header .search-form {
+  width: 90%;
+  right: 2rem;
+}
+
+.main .home .content {
+  max-width: 100%;
+  text-align: center;
+}
+
+.main .about .about-content {
+  padding: 2rem 1rem;
+}
+
+.main .menu .card-container {
+  grid-template-columns: 12fr;
+}
+
+.main .product .product-container {
+  grid-template-columns: 12fr;
+}
+
+.main .review .review-container {
+  grid-template-columns: repeat(2, 6fr);
+}
+
+.main .review .review-container .r-card:last-child {
+  grid-column: 1 / -1;
+}
+
+.main .contact .contact-content {
+  grid-template-columns: 12fr;
+}
+
+.main .blog .blog-container {
+  grid-template-columns: repeat(2, 6fr);
+}
+
+.main .blog .blog-container .blog-card:last-child {
+  grid-column: 1 / -1;
+}
+
+/* happy coding!!!! */
+/* this project made by Fahad at 19th April, 2022 */
