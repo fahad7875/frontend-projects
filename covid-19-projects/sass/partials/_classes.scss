@@ -1,0 +1,58 @@
+//   --﷽--
+
+// classes for button style
+
+.buttonStyle {
+  font-size: 2rem;
+  color: $white;
+  padding: 0.5rem 3rem;
+  margin-top: 2rem;
+  text: {
+    align: center;
+    transform: capitalize;
+  }
+  border-radius: 20rem;
+  background-color: $yellow;
+  transition: $linearTransition;
+
+  &:hover {
+    background-color: $lightBlue;
+  }
+}
+
+// style for section heading
+
+.cardHeading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: $lightBlue;
+  padding: 1rem 0;
+  text: {
+    transform: capitalize;
+    align: center;
+  }
+}
+
+// style for footer ul
+
+.footerUl {
+  padding: 1rem 0;
+
+  li {
+    padding: 0.5rem 0;
+    a {
+      font-size: 1.6rem;
+      text-transform: capitalize;
+      color: $lightBlue;
+      transition: $linearTransition;
+
+      &:hover {
+        color: $yellow;
+        margin-left: 1rem;
+      }
+    }
+  }
+}
+
+// happy coding!!!!
+// this project made by Fahad at 1st May, 2022.

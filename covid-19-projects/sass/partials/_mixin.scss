@@ -1,0 +1,72 @@
+//   --﷽--
+
+//  mixin for html properties
+@mixin htmlProperty {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  scroll-padding-top: 6rem;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $someBlack;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $yellow;
+  }
+}
+
+// mixin for grid layout
+
+@mixin grid($gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+// mixin for grid layout
+
+@mixin flex($direction: row, $justify: center, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+  gap: $gap;
+}
+
+// mixin for title text
+
+@mixin titleText($size: 2rem, $color: $black) {
+  font : {
+    size: $size;
+    weight: 500;
+    family: "Pacifico", cursive;
+  }
+  color: $color;
+  padding: 1rem 0;
+  text-align: center;
+  text-transform: capitalize;
+
+  span {
+    color: $yellow;
+    font-family: "Pacifico", cursive;
+  }
+}
+
+// mixin for title text
+
+@mixin graphText($size: 1.6rem, $color: $textBlack, $align: left) {
+  font-size: $size;
+  color: $color;
+  padding: 1rem 0;
+  text-align: $align;
+  text-transform: capitalize;
+}
+
+// happy coding!!!!
+// this project made by Fahad at 1st May, 2022.
