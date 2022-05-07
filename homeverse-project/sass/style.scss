@@ -1,0 +1,1146 @@
+//   --﷽--
+
+// import partial files
+
+@import "./partials/variables";
+@import "./partials/mixin";
+@import "./partials/classes";
+
+// google font's linked here
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
+// reset or global styles
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+// common style
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+img,
+button {
+  display: block;
+}
+
+i {
+  pointer-events: none;
+}
+
+section {
+  padding: 7rem 2rem;
+}
+
+// slyle for html and body element
+html {
+  font-size: 62.5%;
+  font-family: $fontNunitoSans;
+  @include htmlProperty;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+  background: $white;
+  overflow-x: hidden;
+  position: relative;
+}
+
+// =====styling header element's=====
+.header {
+  max-width: 1200px;
+  width: 100%;
+
+  // ---styling header top---
+  .header-top {
+    padding: 0.5rem 8rem;
+    background-color: $prussianBlue;
+    @include flex(row, space-between);
+
+    // ---styling header top info---
+    .header-top-info {
+      @include flex();
+      flex-wrap: wrap;
+
+      .header-top-link {
+        padding: 0 0.5rem;
+
+        i {
+          font-size: 1.6rem;
+          color: $orangeSoda;
+          display: inline-block;
+        }
+
+        span,
+        address {
+          padding-left: 1rem;
+          display: inline-block;
+          color: $white;
+          font: {
+            size: 1.4rem;
+            weight: 700;
+          }
+          transition: $transition;
+        }
+
+        &:hover,
+        &:focus {
+          span,
+          address {
+            color: $orangeSoda;
+          }
+        }
+      }
+    }
+
+    // ---styling header top social---
+    .header-top-social {
+      @include flex();
+
+      a {
+        i {
+          color: $white;
+          font-size: 1.6rem;
+          padding: 0 0.5rem;
+          transition: $transition;
+        }
+
+        &:hover,
+        &:focus {
+          i {
+            color: $orangeSoda;
+          }
+        }
+      }
+
+      button {
+        margin-left: 2rem;
+        padding: 0.5rem 1rem;
+        color: $white;
+        font: {
+          size: 1.4rem;
+          weight: 700;
+        }
+        text-transform: capitalize;
+        cursor: pointer;
+        border-radius: 0.2rem;
+        background-color: $orangeSoda;
+        transition: $transition;
+
+        &:hover,
+        &:focus {
+          background-color: $yellowGreen;
+        }
+      }
+    }
+  }
+
+  // ---styling header bottom---
+  .header-bottom {
+    min-height: 6rem;
+    padding: 1rem 3rem;
+    background-color: $white;
+    @include flex(row, space-between);
+    border-bottom: 0.1rem solid $yellowGreen;
+
+    &.active {
+      max-width: 1200px;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      z-index: 100;
+    }
+
+    .header-logo {
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .navigation {
+      padding: 0 2rem;
+
+      .sidenav-top {
+        display: none;
+      }
+
+      .nav-item {
+        align-self: flex-end;
+        @include flex();
+
+        li {
+          padding: 0 0.5rem;
+
+          a {
+            padding: 0.5rem 0;
+            font: {
+              size: 1.8rem;
+              weight: 500;
+              family: $fontPoppins;
+            }
+            color: $cadet;
+            text-transform: capitalize;
+            transition: $transition;
+
+            &::after {
+              content: "";
+              display: block;
+              visibility: hidden;
+              height: 0.2rem;
+              width: 3rem;
+              background-color: $yellowGreen;
+              transition: $transition;
+            }
+
+            &:hover,
+            &.active {
+              color: $orangeSoda;
+
+              &::after {
+                visibility: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .mobile-menu {
+      @include flex();
+
+      .mobile-menu-item {
+        width: 3rem;
+        height: 3rem;
+        background: $white;
+        box-shadow: $boxShadow01;
+        cursor: pointer;
+
+        i {
+          padding: 0.7rem;
+          font-size: 1.6rem;
+          color: $darkJungleGreen;
+          transition: $transition;
+        }
+
+        span {
+          display: none;
+          font-size: 1.8rem;
+          font-weight: 500;
+          text-transform: capitalize;
+          color: $darkJungleGreen;
+          transition: $transition;
+        }
+
+        &:hover {
+          i,
+          span {
+            color: $orangeSoda;
+          }
+        }
+      }
+
+      #menu-bar {
+        display: none;
+      }
+    }
+  }
+}
+
+// =====styling home section=====
+.home {
+  min-height: calc(100vh - 10rem);
+  background: $cultured02;
+  @include grid();
+
+  .home-content {
+    grid-column: 1 / 7;
+    padding: 0 2rem;
+
+    .agency {
+      padding: 2rem 0;
+
+      i {
+        display: inline-block;
+        font-size: 2rem;
+        color: $orangeSoda;
+      }
+
+      span {
+        display: inline-block;
+        padding-left: 1rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: $darkJungleGreen;
+        text-transform: capitalize;
+      }
+    }
+
+    h1 {
+      font-size: 5rem;
+      font-weight: 700;
+      text-transform: capitalize;
+      color: $raisanBlack01;
+      margin-bottom: 2rem;
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: $raisanBlack02;
+      padding-left: 1rem;
+      border-left: 0.2rem solid $yellowGreen;
+    }
+
+    input {
+      margin-top: 3rem;
+      @extend .buttonStyle;
+    }
+  }
+
+  .home-image {
+    grid-column: 7 / -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// =====styling about section=====
+.about {
+  background: $white;
+  @include grid();
+
+  .about-image {
+    grid-column: 1 / 6;
+    padding: 3rem 1rem;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      &:last-child {
+        width: 50%;
+        height: 25%;
+        border-radius: 0.5rem;
+        position: absolute;
+        top: 50%;
+        left: 5rem;
+      }
+    }
+  }
+
+  .about-content {
+    grid-column: 6 / -1;
+    padding: 3rem 1rem;
+    text-align: center;
+
+    h5 {
+      @extend .sectionSubTitle;
+    }
+
+    h2 {
+      @extend .sectionTitle;
+    }
+
+    p {
+      font-size: 1.6rem;
+      padding: 1rem 0;
+      color: $raisanBlack01;
+
+      &:last-child {
+        text-align: left;
+        padding: 2rem;
+        border-left: 0.3rem solid $orangeSoda;
+        background: $seashell;
+      }
+    }
+
+    .info-list {
+      padding: 1rem 0;
+      @include grid();
+
+      .info-element {
+        padding: 1rem 0;
+
+        i {
+          font-size: 1.8rem;
+          padding: 1rem;
+          border-radius: 50%;
+          color: $orangeSoda;
+          background: $mistyRose;
+        }
+
+        span {
+          font-size: 1.6rem;
+          padding-left: 0.5rem;
+          text-transform: capitalize;
+        }
+
+        &:nth-child(2n + 1) {
+          grid-column: 1 / 7;
+        }
+
+        &:nth-child(2n + 2) {
+          grid-column: 7 / -1;
+        }
+      }
+    }
+  }
+}
+
+// =====styling service section=====
+.service {
+  background: $cultured02;
+  text-align: center;
+
+  h5 {
+    @extend .sectionSubTitle;
+  }
+
+  h2 {
+    @extend .sectionTitle;
+  }
+
+  .service-container {
+    padding: 1rem 0;
+    @include grid(2rem);
+
+    .service-card {
+      padding: 2rem 1rem;
+      background: $white;
+      box-shadow: $boxShadow02;
+      position: relative;
+
+      img {
+        margin: auto;
+      }
+
+      h3 {
+        @include cardHeading(2rem);
+      }
+
+      p {
+        font-size: 1.6rem;
+        padding: 1rem 2rem;
+        color: $raisanBlack02;
+      }
+
+      a {
+        padding: 2rem 0;
+        color: $opal;
+        transition: $transition;
+
+        span {
+          font-size: 1.8rem;
+          font-weight: 700;
+          text-transform: capitalize;
+        }
+
+        i {
+          padding-left: 0.5rem;
+          font-size: 1.8rem;
+        }
+      }
+
+      &:hover {
+        a {
+          color: $orangeSoda;
+        }
+      }
+
+      &:first-child {
+        grid-column: 1 / 5;
+      }
+
+      &:nth-child(2) {
+        grid-column: 5 / 9;
+      }
+      &:last-child {
+        grid-column: 9 / -1;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 0.4rem;
+        background: $orangeSoda;
+        transition: $transition;
+      }
+
+      &:is(:hover)::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+// =====styling property section=====
+.property {
+  background: $white;
+  text-align: center;
+
+  h5 {
+    @extend .sectionSubTitle;
+  }
+
+  h2 {
+    @extend .sectionTitle;
+  }
+
+  .service-card-container {
+    padding: 3rem 1rem;
+    @include grid(2rem);
+
+    .service-card {
+      background: $aliceBlue;
+      box-shadow: $boxShadow02;
+
+      .banner-image {
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 3rem;
+
+        a {
+          height: 100%;
+
+          img {
+            width: 100%;
+            min-height: 45rem;
+            object-fit: cover;
+            transition: $transition;
+          }
+        }
+
+        p {
+          padding: 0.3rem 1rem;
+          font-size: 1.6rem;
+          text-transform: uppercase;
+          color: $white;
+          display: inline-block;
+          background: $yellowGreen;
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+        }
+
+        .location {
+          position: absolute;
+          bottom: 1rem;
+          left: 2rem;
+          @include flex();
+
+          i {
+            font-size: 1.4rem;
+            color: $white;
+            transition: $transition;
+          }
+
+          address {
+            font-size: 1.4rem;
+            text-transform: capitalize;
+            color: $white;
+            font-style: normal;
+          }
+        }
+
+        .action {
+          position: absolute;
+          bottom: 1rem;
+          right: 2rem;
+          @include flex();
+
+          button {
+            background: transparent;
+            cursor: pointer;
+
+            i {
+              font-size: 1.4rem;
+              color: $white;
+              transition: $transition;
+            }
+
+            span {
+              padding-left: 0.5rem;
+              font-size: 1.4rem;
+              color: $white;
+            }
+          }
+        }
+      }
+
+      .card-content {
+        padding: 1rem;
+        text-align: left;
+
+        .price {
+          font-size: 1.6rem;
+          text-transform: capitalize;
+          color: $orangeSoda;
+
+          strong {
+            font-size: 2rem;
+          }
+        }
+
+        h3 {
+          @include cardHeading(2rem);
+          text-align: left;
+        }
+
+        P {
+          font-size: 1.6rem;
+          padding-bottom: 1rem;
+          text-transform: capitalize;
+        }
+
+        .cart-list {
+          padding: 1rem 0;
+          @include flex(row, flex-start);
+
+          .cart-item {
+            padding: 1rem;
+
+            strong {
+              font-size: 1.6rem;
+              color: $opal;
+            }
+
+            i {
+              font-size: 1.6rem;
+              color: $prussianBlue;
+              padding-left: 0.5rem;
+            }
+
+            span {
+              display: block;
+              padding: 1rem 0;
+              font-size: 1.6rem;
+              color: $cadet;
+              text-transform: capitalize;
+            }
+
+            &:not(:first-child) {
+              border-left: 0.1rem solid $raisanBlack02;
+            }
+          }
+        }
+      }
+
+      .cart-footer {
+        padding: 2rem;
+        border-top: 0.1rem solid $raisanBlack02;
+        @include flex(row, space-between);
+
+        .card-author {
+          @include flex();
+
+          figure {
+            img {
+              width: 5rem;
+              border-radius: 50%;
+            }
+          }
+
+          .author-desc {
+            font-size: 1.6rem;
+            text-transform: capitalize;
+
+            a {
+              color: $raisanBlack01;
+              transition: $transition;
+
+              &:hover {
+                color: $orangeSoda;
+              }
+            }
+
+            p {
+              color: $raisanBlack01;
+            }
+          }
+        }
+
+        .footer-action {
+          @include flex();
+
+          a {
+            padding: 1rem;
+            background: $white;
+            box-shadow: $boxShadow02;
+            transition: $transition;
+
+            i {
+              color: $cadet;
+              font-size: 1.4rem;
+              transition: $transition;
+            }
+
+            &:first-child {
+              i {
+                transform: rotate(-45deg);
+              }
+            }
+
+            &:hover {
+              background: $orangeSoda;
+
+              i {
+                color: $white;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(2) {
+        .banner-image {
+          p {
+            background: $orangeSoda;
+          }
+        }
+      }
+
+      &:hover {
+        .banner-image {
+          a {
+            img {
+              transform: scale(1.1);
+            }
+          }
+
+          .location {
+            i {
+              color: $orangeSoda;
+            }
+          }
+
+          .action {
+            button {
+              i {
+                color: $orangeSoda;
+              }
+            }
+          }
+        }
+      }
+
+      &:nth-child(2n + 1) {
+        grid-column: 1 / 7;
+      }
+
+      &:nth-child(2n + 2) {
+        grid-column: 7 / -1;
+      }
+    }
+  }
+}
+
+// =====styling aminitie section=====
+.aminitie {
+  background: $cultured02;
+  text-align: center;
+
+  h5 {
+    @extend .sectionSubTitle;
+  }
+
+  h2 {
+    @extend .sectionTitle;
+  }
+
+  .am-card-container {
+    margin-top: 2rem;
+    padding: 1rem;
+    @include grid();
+    row-gap: 4rem;
+
+    .aminitie-card {
+      padding: 2rem 0;
+      margin: auto;
+      max-width: 25rem;
+      min-height: 25rem;
+      width: 100%;
+      background: $white;
+      cursor: pointer;
+      border-radius: 1rem;
+      position: relative;
+      transition: $transition;
+
+      .icon {
+        margin-top: 2rem;
+        width: 8rem;
+        height: 8rem;
+        padding: 2.5rem;
+        font-size: 3rem;
+        color: $orangeSoda;
+        background: $seashell;
+        border-radius: 50%;
+      }
+
+      h4 {
+        margin-top: 3rem;
+        font-size: 2rem;
+        padding: 1rem;
+        text-transform: capitalize;
+        color: $black;
+        transition: $transition;
+      }
+
+      .card-btn {
+        display: inline-block;
+        background: $white;
+        box-shadow: $boxShadow01;
+        padding: 1.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: $transition;
+        position: absolute;
+        bottom: -2.5rem;
+        left: 50%;
+        transform: translateX(-50%);
+
+        i {
+          font-size: 2rem;
+        }
+      }
+
+      &:hover {
+        background: $orangeSoda;
+
+        h4 {
+          color: $white;
+        }
+
+        .card-btn {
+          color: $orangeSoda;
+        }
+      }
+
+      &:nth-child(4n + 1) {
+        grid-column: 1 / 4;
+      }
+
+      &:nth-child(4n + 2) {
+        grid-column: 4 / 7;
+      }
+
+      &:nth-child(4n + 3) {
+        grid-column: 7 / 10;
+      }
+
+      &:nth-child(4n + 4) {
+        grid-column: 10 / -1;
+      }
+    }
+  }
+}
+
+// =====styling aminitie section=====
+.blog {
+  text-align: center;
+  background: $white;
+
+  h5 {
+    @extend .sectionSubTitle;
+  }
+
+  h2 {
+    @extend .sectionTitle;
+  }
+
+  .blog-card-container {
+    padding: 3rem 1rem;
+    @include grid(2rem);
+
+    .blog-card {
+      min-height: 46rem;
+      box-shadow: $boxShadow01;
+
+      figure {
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          transition: $transition;
+        }
+      }
+
+      .blog-content {
+        padding: 2rem 1rem;
+        text-align: left;
+
+        .admin {
+          padding: 1rem 0;
+          display: inline-block;
+
+          i {
+            font-size: 1.4rem;
+            color: $orangeSoda;
+          }
+
+          span {
+            color: $raisanBlack01;
+            font-size: 1.4rem;
+            text-transform: capitalize;
+          }
+        }
+
+        .interior {
+          padding: 1rem 0;
+          margin-left: 0.5rem;
+          display: inline-block;
+
+          i {
+            font-size: 1.4rem;
+            color: $orangeSoda;
+            transform: rotate(90deg);
+          }
+
+          span {
+            color: $raisanBlack01;
+            font-size: 1.4rem;
+            text-transform: capitalize;
+          }
+        }
+
+        h3 {
+          @include cardHeading(2rem);
+          text-align: left;
+        }
+      }
+
+      .blog-footer {
+        padding: 2rem 1rem;
+        border-top: 0.1rem solid $opal;
+        @include flex(row, space-between);
+
+        .footer-left {
+          font-size: 1.6rem;
+
+          i {
+            color: $orangeSoda;
+          }
+
+          span {
+            text-transform: capitalize;
+            color: $cadet;
+          }
+        }
+
+        .footer-right {
+          background: none;
+          font-size: 1.6rem;
+          text-transform: capitalize;
+          color: $orangeSoda;
+          cursor: pointer;
+        }
+      }
+
+      &:hover,
+      &focus {
+        figure {
+          img {
+            transform: scale(1.1);
+          }
+        }
+      }
+
+      &:nth-child(1) {
+        grid-column: 1 / 5;
+      }
+
+      &:nth-child(2) {
+        grid-column: 5 / 9;
+      }
+
+      &:nth-child(3) {
+        grid-column: 9 / -1;
+      }
+    }
+  }
+}
+
+// =====styling dream home section=====
+.dream-home {
+  text-align: center;
+  background: linear-gradient(to bottom, $white 50%, $raisanBlack01 50%);
+
+  .dream-card {
+    margin: auto;
+    width: 95%;
+    padding: 4rem;
+    background: $orangeSoda;
+    @include flex(row, space-between);
+
+    .dream-decs {
+      padding: 1rem 0;
+
+      h2 {
+        color: $white;
+        font-size: 4rem;
+        text-transform: capitalize;
+      }
+
+      p {
+        padding: 1rem 0;
+        text-align: left;
+        font-size: 1.8rem;
+        color: $white;
+      }
+    }
+
+    .dream-btn {
+      padding: 1rem 3rem;
+      background: $white;
+      color: $raisanBlack02;
+      font-size: 2rem;
+      cursor: pointer;
+      transition: $transition;
+
+      span {
+        text-transform: capitalize;
+        padding-right: 0.5rem;
+      }
+
+      &:hover {
+        color: $white;
+        background: $darkJungleGreen;
+      }
+    }
+  }
+}
+
+// =====styling footer element=====
+.footer {
+  background: $raisanBlack01;
+
+  .footer-content {
+    padding: 2rem 0 4rem;
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 3rem 1rem;
+
+    .footer-address {
+      grid-column: 1 / 5;
+      padding: 0 1rem;
+
+      figure {
+        margin-bottom: 1rem;
+
+        img {
+          width: 80%;
+        }
+      }
+
+      p {
+        padding: 1rem 0;
+        font-size: 1.6rem;
+        color: $cultured02;
+        margin-bottom: 2rem;
+      }
+
+      .contact-info {
+        margin: 0.5rem 0;
+        padding: 0.5rem 0;
+        cursor: pointer;
+        font-size: 1.4rem;
+        text-transform: capitalize;
+
+        i {
+          color: $cultured02;
+        }
+
+        span {
+          color: $cultured02;
+          padding-left: 0.5rem;
+        }
+
+        .l-mail {
+          text-transform: lowercase;
+        }
+      }
+
+      .social-icon {
+        padding: 1rem 0;
+
+        a {
+          display: inline-block;
+          margin-right: 0.5rem;
+          padding: 1rem;
+
+          i {
+            font-size: 1.6rem;
+            color: $white;
+            transition: $transition;
+          }
+
+          &:hover {
+            i {
+              color: $orangeSoda;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-company {
+      grid-column: 5 / 8;
+      @extend .footerContentStyle;
+    }
+
+    .footer-service {
+      grid-column: 8 / 11;
+      @extend .footerContentStyle;
+    }
+
+    .footer-customer {
+      grid-column: 11 / -1;
+      @extend .footerContentStyle;
+    }
+  }
+
+  .footer-copyright {
+    padding: 2rem;
+    background: $cadet;
+
+    p {
+      color: $white;
+      text-align: center;
+      font-size: 1.6rem;
+      text-transform: capitalize;
+
+      a {
+        display: inline-block;
+        color: $white;
+        transition: $transition;
+
+        &:hover {
+          color: $orangeSoda;
+        }
+      }
+    }
+  }
+}
+
+// happy coding !!!!
+// this project made by Fahad at 7th May, 2022

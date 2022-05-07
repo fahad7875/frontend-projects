@@ -1,0 +1,55 @@
+//   --﷽--
+
+// mixin for htmlProperty
+@mixin htmlProperty {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $cadet;
+  }
+}
+
+// mixin for grid layout
+@mixin grid($gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+// mixin for grid layout
+@mixin flex($direction: row, $justify: center, $gap: 1rem) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+  gap: $gap;
+}
+
+// mixin for card heading
+@mixin cardHeading($size: 1.6rem) {
+  font-size: $size;
+  color: $black;
+  text-align: center;
+  text-transform: capitalize;
+  padding: 1rem 0;
+  cursor: context-menu;
+  transition: $transition;
+
+  &:hover {
+    color: $orangeSoda;
+  }
+}
+
+// happy coding !!!!
+// this project made by Fahad at 7th May, 2022

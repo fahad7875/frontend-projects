@@ -1,0 +1,80 @@
+//   --﷽--
+
+// style for button
+.buttonStyle {
+  font-size: 1.8rem;
+  font-family: $fontPoppins;
+  background: $orangeSoda;
+  text-transform: capitalize;
+  padding: 0.5rem 2rem;
+  cursor: pointer;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $white;
+    background: $black;
+  }
+}
+
+// sectionTitle
+.sectionTitle {
+  font-size: 3rem;
+  color: $darkJungleGreen;
+  padding: 1rem 0;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+// sectionsubtitle style
+.sectionSubTitle {
+  display: inline-block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 0.5rem 3rem;
+  margin-bottom: 2rem;
+  border-radius: 20rem;
+  background: $mistyRose;
+  color: $orangeSoda;
+  text-transform: capitalize;
+}
+
+// footer contect list style
+.footerContentStyle {
+  padding: 0 1rem;
+
+  h3 {
+    font-size: 2.4rem;
+    text-transform: capitalize;
+    color: $white;
+    padding: 1rem 0;
+  }
+
+  .footer-list {
+    padding: 1rem 0;
+
+    li {
+      padding: 0.5rem 0;
+
+      a {
+        display: inline-block;
+        color: $white;
+        padding: 0.5rem;
+        text-transform: capitalize;
+        font-size: 1.4rem;
+        transition: $transition;
+
+        &.upper {
+          text-transform: uppercase;
+        }
+
+        &:hover {
+          color: $orangeSoda;
+        }
+      }
+    }
+  }
+}
+
+// happy coding !!!!
+// this project made by Fahad at 7th May, 2022
