@@ -1,0 +1,39 @@
+//   --﷽--
+
+// mixin for htmlProperty
+@mixin htmlProperty {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $colorWhite;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $colorPink;
+  }
+}
+
+// mixin for grid layout
+@mixin grid($val: 12, $gap: 1rem) {
+  display: grid;
+  grid-template-columns: repeat($val, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin flex($justify: center, $dir: row, $gap: 1rem) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: center;
+  gap: $gap;
+}
+
+// happy coding !!!!
+// this project made by Fahad at 10th May, 2022.

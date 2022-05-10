@@ -1,0 +1,54 @@
+//   --﷽--
+
+//  linked google font
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+// reset or global style
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+}
+
+// common style
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a,
+img {
+  display: block;
+}
+
+i {
+  pointer-events: none;
+}
+
+// animation fadeIn
+@keyframes fadeIn {
+  0% {
+    transform: translateY(3rem);
+    opacity: 0;
+  }
+}
+
+// slide animation
+@keyframes slide-animation {
+  0% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+// happy coding !!!!
+// this project made by Fahad at 10th May, 2022.

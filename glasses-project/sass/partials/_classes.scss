@@ -1,0 +1,99 @@
+//   --﷽--
+
+// style for sectionHeading
+.sectionHeading {
+  font-size: 3rem;
+  padding: 0.5rem 0;
+  color: $colorPink;
+  font-family: $fontPacifico;
+  text-transform: capitalize;
+  text-align: center;
+}
+
+// style for button
+.btn {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 3rem;
+  font-size: 1.6rem;
+  color: $colorBlack;
+  border: $border;
+  background: none;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  text-transform: capitalize;
+  transition: $transition;
+
+  &:hover {
+    color: $colorWhite;
+    background: $colorBlack;
+  }
+}
+
+// style for page title section
+.pageTitleSection {
+  text-align: center;
+  background: $colorPink;
+
+  h2 {
+    font-size: 5rem;
+    padding: 0.5rem 0;
+    font-family: $fontPacifico;
+    color: $colorWhite;
+    text-transform: capitalize;
+  }
+
+  .page-direction {
+    padding-bottom: 2rem;
+    font-size: 1.8rem;
+    color: $colorWhite;
+    text-transform: capitalize;
+
+    a {
+      display: inline-block;
+      color: $colorWhite;
+      transition: $transition;
+
+      &:hover {
+        color: $colorBlack;
+      }
+    }
+  }
+}
+
+// style for h3 heading
+.headingH3 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 1rem 0;
+  margin-bottom: 0.5rem;
+  color: $colorBlack;
+  text-transform: capitalize;
+}
+
+// style fotter list link
+.footerLinkList {
+  font-size: 1.4rem;
+  padding: 0.7rem 0;
+
+  i {
+    color: $colorPink;
+  }
+
+  span {
+    padding-left: 0.5rem;
+    color: $colorBlack;
+    text-transform: capitalize;
+    transition: $transition;
+  }
+
+  &:hover {
+    span {
+      color: $colorPink;
+      padding-left: 1.5rem;
+    }
+  }
+}
+
+// happy coding !!!!
+// this project made by Fahad at 10th May, 2022.

@@ -1,0 +1,437 @@
+//  --﷽--
+
+// importing partial files
+@import "./partials/global";
+@import "./partials/variables";
+@import "./partials/mixin";
+@import "./partials/classes";
+
+// mediaqurey for 991px or less
+@media screen and (max-width: 991px) {
+  // =====styling header element's=====
+  .header {
+    padding: 0 2rem;
+
+    .search-form {
+      width: 90%;
+      right: 0;
+      left: 0;
+      margin: auto;
+    }
+  }
+
+  // =====styling home page main elements=====
+  .main-home {
+    .home-card {
+      .hp-card {
+        &:nth-child(1) {
+          grid-column: 1 / 7;
+        }
+
+        &:nth-child(2) {
+          grid-column: 7 / -1;
+        }
+
+        &:nth-child(3) {
+          grid-column: 4 / 10;
+        }
+      }
+    }
+  }
+
+  // =====styling product page main elements=====
+  .main-products {
+    .product-container {
+      .pc-container {
+        .p-card {
+          &:nth-child(odd) {
+            grid-column: 1 / 7;
+          }
+
+          &:nth-child(even) {
+            grid-column: 7 / -1;
+          }
+
+          &:last-child {
+            grid-column: 4 / 10;
+          }
+        }
+      }
+    }
+  }
+
+  // =====styling about page main elements=====
+  .main-about {
+    .about-content {
+      .ac-card-container {
+        .acc-card {
+          &:nth-child(1) {
+            grid-column: 1 / 11;
+          }
+
+          &:nth-child(2) {
+            grid-column: 11 / 21;
+          }
+
+          &:nth-child(3) {
+            grid-column: 21 / -1;
+          }
+
+          &:nth-child(4) {
+            grid-column: 6 / 16;
+          }
+
+          &:nth-child(5) {
+            grid-column: 16 / 26;
+          }
+        }
+      }
+    }
+  }
+
+  // =====styling blog page main elements=====
+  .main-blogs {
+    .blog-content {
+      .bc-card-container {
+        .bcc-card {
+          &:nth-child(odd) {
+            grid-column: 1 / 7;
+          }
+
+          &:nth-child(even) {
+            grid-column: 7 / -1;
+          }
+        }
+      }
+    }
+  }
+
+  // =====styling login page main elements=====
+  .main-login {
+    .user-login {
+      .login-form {
+        width: 60%;
+      }
+    }
+  }
+
+  // =====styling register page main elements=====
+  .main-register {
+    .user-register {
+      .register-form {
+        width: 60%;
+      }
+    }
+  }
+
+  // =====styling cart page main elements=====
+  .main-cart {
+    .cart-content {
+      .cc-container {
+        .ccc-card {
+          &:nth-child(odd) {
+            grid-column: 1 / 7;
+          }
+
+          &:nth-child(even) {
+            grid-column: 7 / -1;
+          }
+
+          &:last-child {
+            grid-column: 4 / 10;
+          }
+        }
+      }
+    }
+  }
+}
+
+// mediaqurey for 768px or less
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 58%;
+  }
+
+  // =====styling header element's=====
+  .header {
+    padding: 0 3rem;
+
+    .navigation {
+      width: 100%;
+      height: auto;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      transform: scaleY(0);
+      transform-origin: top;
+      background: $colorWhite;
+      box-shadow: $boxShadow;
+      transition: $transition;
+
+      &.active {
+        transform: scaleY(1);
+      }
+
+      .main-list {
+        flex-direction: column;
+        width: 100%;
+
+        li {
+          width: 100%;
+
+          a {
+            padding-left: 3rem;
+          }
+
+          .sub-list {
+            position: relative;
+            width: 100%;
+            box-shadow: none;
+
+            li {
+              a {
+                padding-left: 4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .header-icons {
+      #menu-icon {
+        display: block;
+      }
+    }
+  }
+
+  // =====styling about page main elements=====
+  .main-about {
+    .about-content {
+      .ac-desc {
+        .acd-image {
+          grid-column: 1 / -1;
+        }
+
+        .acd-text {
+          grid-column: 1 / -1;
+
+          h3 {
+            text-align: center;
+          }
+
+          input[type="button"] {
+            display: block;
+            margin: 2rem auto;
+          }
+        }
+      }
+    }
+  }
+
+  // =====styling contact page main elements=====
+  .main-contact {
+    .contact-content {
+      .content-body {
+        .contact-form {
+          grid-column: 1 / -1;
+        }
+
+        .location-map {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+  }
+
+  // =====styling footer element=====
+  .footer {
+    .footer-content {
+      .quick-links {
+        grid-column: 1 / 7;
+      }
+
+      .extra-links {
+        grid-column: 7 / -1;
+      }
+
+      .follow-us {
+        grid-column: 1 / 7;
+      }
+
+      .newsletter {
+        grid-column: 7 / -1;
+      }
+    }
+  }
+}
+
+// mediaqurey for 576px or less
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 54%;
+  }
+
+  // =====styling home page main elements=====
+  .main-home {
+    .slide-gallery {
+      .slide {
+        .slide-content {
+          left: 50%;
+        }
+      }
+
+      .dot-indicator {
+        bottom: 0.7rem;
+      }
+    }
+
+    .home-card {
+      .hp-card {
+        &:nth-child(n) {
+          grid-column: 1 / -1;
+        }
+      }
+    }
+  }
+
+  // =====styling product page main elements=====
+  .main-products {
+    .product-container {
+      .pc-container {
+        .p-card {
+          &:nth-child(n) {
+            grid-column: 1 / -1;
+          }
+        }
+      }
+    }
+  }
+
+  // =====styling about page main elements=====
+  .main-about {
+    .about-content {
+      .ac-card-container {
+        .acc-card {
+          &:nth-child(odd) {
+            grid-column: 1 / 16;
+          }
+
+          &:nth-child(even) {
+            grid-column: 16 / -1;
+          }
+
+          &:last-child {
+            grid-column: 8 / 24;
+          }
+        }
+      }
+    }
+  }
+
+  // =====styling blog page main elements=====
+  .main-blogs {
+    .blog-content {
+      .bc-card-container {
+        .bcc-card {
+          &:nth-child(n) {
+            grid-column: 1 / -1;
+          }
+        }
+      }
+    }
+  }
+
+  // =====styling login page main elements=====
+  .main-login {
+    .user-login {
+      .login-form {
+        width: 70%;
+      }
+    }
+  }
+
+  // =====styling register page main elements=====
+  .main-register {
+    .user-register {
+      .register-form {
+        width: 70%;
+      }
+    }
+  }
+
+  // =====styling cart page main elements=====
+  .main-cart {
+    .cart-content {
+      .cc-container {
+        .ccc-card {
+          &:nth-child(n) {
+            grid-column: 1 / -1;
+          }
+        }
+      }
+    }
+  }
+}
+
+// mediaqurey for 420px or less
+@media screen and (max-width: 420px) {
+  html {
+    font-size: 50%;
+  }
+
+  // =====styling about page main elements=====
+  .main-about {
+    .about-content {
+      .ac-card-container {
+        .acc-card {
+          &:nth-child(n) {
+            grid-column: 1 / -1;
+          }
+        }
+      }
+    }
+  }
+
+  // =====styling login page main elements=====
+  .main-login {
+    .user-login {
+      .login-form {
+        width: 95%;
+      }
+    }
+  }
+
+  // =====styling register page main elements=====
+  .main-register {
+    .user-register {
+      .register-form {
+        width: 95%;
+      }
+    }
+  }
+
+  // =====styling footer element=====
+  .footer {
+    .footer-content {
+      .quick-links {
+        grid-column: 1 / -1;
+      }
+
+      .extra-links {
+        grid-column: 1 / -1;
+      }
+
+      .follow-us {
+        grid-column: 1 / -1;
+      }
+
+      .newsletter {
+        grid-column: 1 / -1;
+      }
+    }
+  }
+}
+
+// happy coding !!!!
+// this project made by Fahad at 10th May, 2022.
